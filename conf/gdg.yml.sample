@@ -1,0 +1,11 @@
+context_name: main
+
+contexts:
+  main:
+    url: http://web1.local:3000
+    token: "xxxxxxxxxxxxxxxx"
+    ignore_filters: False
+
+global:
+  debug: false
+  ignore_ssl_errors: false

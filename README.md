@@ -4,9 +4,10 @@ Grafana dashboards in my labo.
 
 ## Command
 
-| Command       | Description                              |
-| ------------- | ---------------------------------------- |
-| `make import` | Import dashboard from my grafana-server. |
+| Command       | Description                               |
+| ------------- | ----------------------------------------- |
+| `make list`   | List dashboards in my grafana-server.     |
+| `make import` | Import dashboards from my grafana-server. |
 
 ## Prerequisite
 
@@ -23,8 +24,6 @@ Grafana dashboards in my labo.
   ```bash
   vi conf/gdg.yml
   ```
-
-- Done.
 
 ## Prometheus Blackbox Exporter
 

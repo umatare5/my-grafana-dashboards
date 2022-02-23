@@ -10,7 +10,7 @@ Grafana dashboards in my labo.
 
 ## Prerequisite
 
-- Download and install [gdg](https://github.com/netsage-project/gdg).
+- Install [gdg](https://github.com/netsage-project/gdg).
 
 - Put `config/gdg.yml`.
 

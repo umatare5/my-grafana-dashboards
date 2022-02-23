@@ -24,7 +24,7 @@
   "gnetId": 14928,
   "graphTooltip": 0,
   "id": 2,
-  "iteration": 1645276754794,
+  "iteration": 1645626980272,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -298,10 +298,6 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "o3pvxQ-7z"
-      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -370,7 +366,9 @@
         "legend": {
           "calcs": ["mean"],
           "displayMode": "table",
-          "placement": "right"
+          "placement": "right",
+          "sortBy": "Mean",
+          "sortDesc": false
         },
         "tooltip": {
           "mode": "multi",
@@ -380,8 +378,12 @@
       "pluginVersion": "8.1.0",
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "o3pvxQ-7z"
+          },
           "exemplar": true,
-          "expr": "probe_duration_seconds{target=~\"$target\"}",
+          "expr": "probe_duration_seconds{target=~\"$target\"} - probe_dns_lookup_time_seconds",
           "format": "time_series",
           "interval": "$interval",
           "intervalFactor": 1,
@@ -403,6 +405,7 @@
             "mode": "thresholds"
           },
           "custom": {
+            "axisLabel": "",
             "axisPlacement": "auto",
             "axisSoftMax": 599,
             "barAlignment": 0,
@@ -1057,7 +1060,11 @@
         "type": "interval"
       },
       {
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": {
           "type": "prometheus",
           "uid": "o3pvxQ-7z"
@@ -1082,7 +1089,11 @@
         "useTags": false
       },
       {
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": {
           "type": "prometheus",
           "uid": "o3pvxQ-7z"
@@ -1110,8 +1121,8 @@
     ]
   },
   "time": {
-    "from": "now-30m",
-    "to": "now"
+    "from": "2022-02-23T12:10:55.692Z",
+    "to": "2022-02-23T13:59:21.601Z"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -1142,6 +1153,6 @@
   "timezone": "",
   "title": "Prometheus Blackbox Exporter",
   "uid": "pS6ZuGV7z",
-  "version": 7,
+  "version": 10,
   "weekStart": ""
 }

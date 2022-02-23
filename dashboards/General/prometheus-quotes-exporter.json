@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1645618160272,
+  "iteration": 1645624856085,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -96,7 +96,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 11,
         "w": 12,
         "x": 0,
         "y": 0
@@ -124,7 +124,7 @@
           "expr": "avg(quotes_rsi_week_per_hour_rate{job=\"quote_stock\"})",
           "interval": "$min_step_interval",
           "intervalFactor": 1,
-          "legendFormat": "All Quotes",
+          "legendFormat": "All Stocks",
           "refId": "A"
         },
         {
@@ -213,7 +213,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 11,
         "w": 12,
         "x": 12,
         "y": 0
@@ -241,7 +241,7 @@
           "expr": "avg(quotes_rsi_weeks_per_hour_rate{job=\"quote_stock\"})",
           "interval": "$min_step_interval",
           "intervalFactor": 1,
-          "legendFormat": "All Quotes",
+          "legendFormat": "All Stocks",
           "refId": "A"
         },
         {
@@ -319,7 +319,7 @@
         "h": 12,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 11
       },
       "id": 5,
       "options": {
@@ -415,7 +415,7 @@
         "h": 12,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 11
       },
       "id": 7,
       "options": {
@@ -505,6 +505,6 @@
   "timezone": "",
   "title": "Prometheus Quotes Exporter",
   "uid": "8z4_OvBnz",
-  "version": 32,
+  "version": 35,
   "weekStart": ""
 }
